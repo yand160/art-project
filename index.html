@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art - My hobby </title>
+    <style>
+        body {
+            background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/668/original/graffiti-1874452_1920.jpg?1665805672);
+            background: cover;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid rgb(95, 16, 6);
+            background: white;
+            font-size: 20px;
+            border-radius: 8px;
+            padding: 10px 15px;
+            transition: all 150ms ease-in-out;
+        }
+
+        button:hover {
+            background: rgb(167, 13, 57);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 25px;
+        }
+
+        .theme-button {
+            font-size: 16px;
+            background: rgb(167, 13, 57);
+            color: white;
+            padding: 5 8px;
+        }
+
+        .theme-button:hover {
+            color: black;
+            background: white;
+        }
+
+        .art-girl-picture {
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .art-girl-picture:hover {
+            filter: contrast(80%);
+            transform: scale(1.1);
+        }
+
+        .grid {
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .grid img {
+            width: 100%;
+            border-radius: 8px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .grid img:hover {
+            transform: scale(2);
+        }
+
+        .dark {
+            background: black;
+            color: white;
+        }
+
+        .dark .container {
+            background: rgb(50, 8, 8);
+        }
+    </style>
+
+</head>
+
+<body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+
+        <h1>
+            What is Art? 🎨 👩🏾‍🎨 🖌🖍
+        </h1>
+        <h2>One of my favorite hobbies</h2>
+        <a href="https://en.wikipedia.org/wiki/Art_history" target="_blank">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/628/original/girl-2696947_1920.jpg?1665782791"
+                alt="girl face" class="art-girl-picture" />
+        </a>
+
+        <div class="grid">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/629/original/jazz-1273574_1920.jpg?1665783396"
+                alt="jazz" />
+
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/630/original/colorful-2137080_1920.jpg?1665783497"
+                alt="color pencils" />
+
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/631/original/portrait-3113651_1920.jpg?1665783546"
+                alt="portrait" />
+
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/635/original/louvre.jpeg?1665784231"
+                alt="louvre" />
+
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/634/original/graffiti-508272_1920.jpg?1665783670"
+                alt="graffiti" />
+
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/662/original/graffiti-623003_1920.jpg?1665802468"
+                alt="graffiti2">
+        </div>
+        <p>
+            The definition of Art is the expression or application of human creative skill and imagination, typically in
+            a
+            visual form such as painting or sculpture, producing works to be appreciated primarily for their beauty or
+            emotional power.
+            <br /><br>
+            📖
+            <a href="https://en.wikipedia.org/wiki/Art_history" target="_blank">
+                <strong>Read on wikipedia</strong>
+            </a>
+        </p>
+
+        <button>Learn about Art</button>
+
+    </div>
+    <footer>
+        <strong>Coded with ❤️ by Yandia Alexis</strong>
+    </footer>
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+
+        }
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme);
+    </script>
+</body>
+
+</html>
